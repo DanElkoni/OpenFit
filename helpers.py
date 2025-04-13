@@ -13,7 +13,14 @@ class Excercise:
 class Workout:
     def __init__(self, name):
         self.name = name
-        self.workouts = []
+        self.excercises = []
 
     def addExcercise(self, excercise):
-        self.workouts.append(excercise)
+        self.excercises.append(excercise)
+
+    def display(self, num):
+        print(f"Workout {num}: {self.name}")
+        x = 1
+        for excercise in self.excercises:
+            print(f"Excercise {x}: {excercise.name} at {excercise.weight}lbs for {excercise.sets}x{excercise.reps} reps")
+            x+=1
